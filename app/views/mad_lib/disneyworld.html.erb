@@ -1,0 +1,13 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title></title>
+ </head>
+ <body>
+ 	<p>Last month, I went to Disney World with  <span class="fill_in_word"> <%= @name %> </span>. We traveled for <span class="fill_in_word"><%= @number %></span> hours by <span class="fill_in_word"> <%= @vehicle %> </span>. </p><p>
+ 	Finally, we got there and it was very <span class="fill_in_word"> <%= @adjective %> </span>. There were <span class="fill_in_word"> <%= @adjective %> </span> people <%= @ing_verb %>everywhere. There were also people dressed up <span class="fill_in_word"> <%= @animal %> </span>. I wish it had been more <span class="fill_in_word"> <%= @adjective %> </span>, but we <span class="fill_in_word"> <%= @past_tense_verb %> </span> anyway. We also went on some <span class="fill_in_word"> <%= @adjective %> </span> rides, called "Magic Noun". <span class="fill_in_word"> <%= @friends_name %> </span> nearly fell off a ride and had to be <span class="fill_in_word"> <%= @past_tense_verb %> </span>. Later we went to the hotel and <span class="fill_in_word"> <%= @past_tense_verb %> </span>. Next year, I want to go to <span class="fill_in_word"> <%= @place %> </span>, where we can <span class="fill_in_word"> <%= @verb %> </span>.
+ 	</p>
+ </body>
+ </html>
+
+<%= button_to "BUTTON: link version", mad_lib_path, :method => "get" %>

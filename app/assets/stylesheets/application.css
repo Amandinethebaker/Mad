@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+body {
+	background-color: rgb(254, 204, 255);
+	font-family: 'Oleo Script Swash Caps', cursive;
+}
+
+.disney_input {
+	color: blue;
+}
+
+.intro-text {
+	vertical-align: center;
+}
+
+/*.align-element {
+
+}
+*/
+
+
+.fill_in_word {
+	font-family: 'Oleo Script', cursive;
+	background-color: #4CBDC1;
+	color: #D95D91;
+	/*padding-left: 5px;*/
+	/*padding-right: 5px;*/
+}
+
+.button {
+	backgrou 2-color: rgb(233, 130, 255);
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}

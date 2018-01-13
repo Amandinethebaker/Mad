@@ -1,8 +1,193 @@
-<h1>MadLib#index</h1>
-<p>Find me in app/views/mad_lib/index.html.erb</p>
+<script type="text/javascript">
+      $(document).ready(function(){
+        $("#video_game", "#disneyworld").addClass(".hide");
+        $('#madlib_form').on('change', function() {
+          if (this.value == 'video_game') 
+          {
+            console.log('hi im video game')
+            $("#video_game").addClass("show").removeClass("hide");
+            $("#disneyworld").addClass("hide");
+          }
+          else if (this.value == 'disneyworld')
+          {
+            console.log('hi im disneyworld')
 
-Last month, I went to Disney World with __________ (Friend's name) . We traveled for __________(Number hours) by __________(Vehicle).   
-Finally, we got there and it was very __________(Adjective). There were __________(Adjective) 
-people __________("ing" verb) everywhere. There were also people dressed up in __________(Animal) costumes.  
- I wish it had been more __________(Adjective), but we __________(Past Tense Verb) anyway. We also went on some __________(Adjective) rides, called "Magic Noun". Friend's name nearly fell off a ride and had to be __________(Past Tense Verb). Later we went to the hotel and __________(Past Tense Verb).  
- Next year, I want to go to __________(Place), where we can ________(Verb). 
+            $("#disneyworld").addClass("show").removeClass("hide");
+            $("#video_game").addClass("hide");
+          
+          }
+        });
+      });
+</script>
+
+<section class="madlib-form">
+  <select id="madlib_form">
+    <option value="blank">Ready to make an awesome mad lib? Just click here!</option>
+    <option value="disneyworld">Disneyworld</option>
+    <option value="video_game">Video Game</option>
+  </select>
+</section>
+
+
+<!-- dropdown for choosing mad lib -->
+<!-- <ul id="mad_lib-form" class="dropdown menu" data-dropdown-menu>
+  <li value="disneyworld"><a href="#">Disneyworld</a></li>
+  <li value="video_game"><a href="#">Video Games</a></li>
+</ul>
+ -->
+
+
+
+<div class="intro-text" align="center">
+  <h1>🌙Lundine's lit mad libs🍍✌🍍</h1> 
+  <p align="center">You don't need anything but a little bit of imagination!</p>
+</div>
+<%= form_tag("disneyworld", method: "post") do %>
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+		<!-- repeat as necessary -->
+		<div id="disneyworld" class="hide">
+  		<div class="row">
+          <div class="medium-6 columns">
+            <%= label_tag("Name")%>
+            <%= text_field_tag 'name' %>
+
+            <%= label_tag("Number")%>
+            <%= text_field_tag 'number' %>
+
+            <%= label_tag("Vehicle")%>
+            <%= text_field_tag 'vehicle' %>
+
+            <%= label_tag("Adjective ")%>
+            <%= text_field_tag 'adjective' %>
+
+            <%= label_tag("Adjective")%>
+            <%= text_field_tag 'adjective' %>
+
+            <%= label_tag("Verb ending in 'ing'")%>
+            <%= text_field_tag 'ing_verb' %>
+
+            <%= label_tag("Animal")%>
+            <%= text_field_tag 'animal' %>
+
+            <%= label_tag("Adjective")%>
+            <%= text_field_tag 'adjective' %>
+
+            <%= label_tag("Past tense verb")%>
+            <%= text_field_tag 'past_tense_verb' %>
+
+            <%= label_tag("Adjective")%>
+            <%= text_field_tag 'adjective' %>
+          </div>
+          <div class="medium-6 columns">
+            <%= label_tag("Friends name")%>
+            <%= text_field_tag 'friends_name' %>
+
+            <%= label_tag("Past tense verb")%>
+            <%= text_field_tag 'past_tense_verb' %>
+
+            <%= label_tag("Past Tense Verb")%>
+            <%= text_field_tag 'past_tense_verb' %>
+
+            <%= label_tag("Place")%>
+            <%= text_field_tag 'place' %>
+
+            <%= label_tag("Verb")%>
+            <%= label_tag("Plural Noun")%>
+            <%= text_field_tag 'plural_noun' %>
+
+            <%= label_tag("Plural Noun (2)")%>
+            <%= text_field_tag 'plural_noun_2' %>
+
+            <%= label_tag("Plural Noun (3)")%>
+            <%= text_field_tag 'plural_noun_3' %>
+
+            <%= label_tag("Plural Noun (4)")%>
+            <%= text_field_tag 'plural_noun_4' %>
+
+            <%= label_tag("Verb")%>
+            <%= text_field_tag 'verb' %>
+  		  </div>
+        <!-- submit -->
+        <div class="small-12 columns">
+          <h3>Step #3:</h3>
+          <%= submit_tag "Generate Disneyworld MadLib", class: "large button" %>
+        </div>
+	    </div>
+    </div>
+    <% end %>
+      <!-- end repeat -->
+
+      <!-- begin video_games mad_lib form -->
+    <%= form_tag("video_game", method: "post") do %>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <!-- repeat as necessary -->
+      <div id="video_game" class="hide">
+        <div class="row">
+          <div class="medium-6 columns">
+              <%= label_tag("Adjective")%>
+              <%= text_field_tag 'adjective' %>
+
+              <%= label_tag("Adjective")%>
+              <%= text_field_tag 'adjective_2' %>
+
+              <%= label_tag("Adjective")%>
+              <%= text_field_tag 'adjective_3' %>
+
+              <%= label_tag("Adjective ")%>
+              <%= text_field_tag 'adjective_4' %>
+
+              <%= label_tag("Adjective")%>
+              <%= text_field_tag 'adjective_5' %>
+
+              <%= label_tag("Name")%>
+              <%= text_field_tag 'name' %>
+
+              <%= label_tag("Name")%>
+              <%= text_field_tag 'name_2' %>
+
+              <%= label_tag("Animal")%>
+              <%= text_field_tag 'animal' %>
+
+              <%= label_tag("Animal")%>
+              <%= text_field_tag 'animal_2' %>
+              
+              <%= label_tag("Past Tense Verb")%>
+              <%= text_field_tag 'past_tense_verb' %>
+            </div>
+            <div class="medium-6 columns">
+              <%= label_tag("Verb")%>
+              <%= text_field_tag 'verb' %>
+
+              <%= label_tag("Number")%>
+              <%= text_field_tag 'number' %>
+
+              <%= label_tag("Number")%>
+              <%= text_field_tag 'number_2' %>
+
+              <%= label_tag("Number")%>
+              <%= text_field_tag 'number_3' %>
+
+              <%= label_tag("Plural Noun")%>
+              <%= text_field_tag 'plural_noun' %>
+
+              <%= label_tag("Plural Noun")%>
+              <%= text_field_tag 'plural_noun_2' %>
+
+              <%= label_tag("Plural Noun")%>
+              <%= text_field_tag 'plural_noun_3' %>
+
+              <%= label_tag("Plural Noun")%>
+              <%= text_field_tag 'plural_noun_4' %>
+
+              <%= label_tag("Plural Noun")%>
+              <%= text_field_tag 'plural_noun_5' %>
+
+            </div>
+          <!-- submit -->
+          <div class="small-12 columns">
+            <h3>Step #3:</h3>
+            <%= submit_tag "Generate Video_Game MadLib", class: "large button" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
